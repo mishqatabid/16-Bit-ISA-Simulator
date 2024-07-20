@@ -20,8 +20,17 @@ This is the core class of the simulator. It manages memory, registers, and the e
   - `void execute(const vector<Instruction>& program)`: Takes a vector of instructions and executes them. Each instruction is processed based on its opcode.
   - `void displayState() const`: Displays the current state of the memory and registers in a formatted manner.
 
-## Instruction Struct
+## `Instruction` Struct
 This structure defines the format of an instruction. It includes an opcode and two operands.
 - `Opcode opcode`: The operation code defining the type of operation (ADD, SUB, LOAD, STORE, END).
 - `int operand1`: The first operand for the instruction.
 - `int operand2`: The second operand for the instruction.
+
+## `Opcode` Enum
+Defines the set of operation codes supported by the simulator.
+- `ADD = 0`: Adds the values in two registers.
+- `SUB = 1`: Subtracts the value in one register from another.
+- `LOAD = 2`: Loads a value from memory into a register.
+- `STORE = 3`: Stores a value from a register into memory.
+- `END = 4`: Terminates the execution of the program.
+
