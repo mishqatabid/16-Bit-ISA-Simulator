@@ -11,12 +11,17 @@ The ISA Simulator is a simple emulator for a hypothetical Instruction Set Archit
 ## `ISA_Simulator` Class
 This is the core class of the simulator. It manages memory, registers, and the execution of instructions.
 - **Private Members**
-  - `vector<int> memory:` Represents the memory unit of the simulator.
-  - `int registers[NUM_REGISTERS]:` An array representing the registers.
-  - `int pc:` Program counter, keeps track of the current instruction address.
+  - `vector<int> memory`: Represents the memory unit of the simulator.
+  - `int registers[NUM_REGISTERS]`: An array representing the registers.
+  - `int pc`: Program counter, keeps track of the current instruction address.
 - **Public Methods**
   - `ISA_Simulator()`: Constructor that initializes the memory and registers by calling the reset() function.
   - `void reset()`: Resets the memory and registers to their initial states.
   - `void execute(const vector<Instruction>& program)`: Takes a vector of instructions and executes them. Each instruction is processed based on its opcode.
   - `void displayState() const`: Displays the current state of the memory and registers in a formatted manner.
 
+## Instruction Struct
+This structure defines the format of an instruction. It includes an opcode and two operands.
+- `Opcode opcode`: The operation code defining the type of operation (ADD, SUB, LOAD, STORE, END).
+- `int operand1`: The first operand for the instruction.
+- `int operand2`: The second operand for the instruction.
